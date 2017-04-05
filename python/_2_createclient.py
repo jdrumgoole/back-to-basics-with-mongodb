@@ -20,7 +20,7 @@ import pprint
 
 if __name__ == '__main__':
     
-    client = pymongo.MongoClient( host="mongodb://localhost:27017" )
+    client = pymongo.MongoClient(host="mongodb://localhost:27017")
     
     database = client["test"]
     
