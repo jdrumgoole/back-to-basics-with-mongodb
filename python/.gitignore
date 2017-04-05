@@ -95,3 +95,4 @@ apikey.py
 .project
 .pydevproject
 .settings
+.gitignore
