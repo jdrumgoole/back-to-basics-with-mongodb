@@ -42,6 +42,7 @@ Collections are analogous to tables in the relational world.
 However a collection stores JSON docs so each "row" of a collection
 is a JSON document which may be hierarchical in nature.
     ''' )
+    
     collection = database.create_collection( "new_collection" )
     pprint.pprint( collection )  
     
@@ -62,6 +63,7 @@ and is unique for every document in the collection.
 
 ''' 
     )
+    
     collection.insert_one( { "Hello" :"World"})
     doc = collection.find_one( {"Hello" :"World"})    
     pprint.pprint( doc )
@@ -186,3 +188,4 @@ Now note how all these different structures were written to the same collection
 
     for i in collection.find() :
         pprint.pprint( i )
+        
