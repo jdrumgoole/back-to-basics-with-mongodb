@@ -36,6 +36,16 @@ have a population greater than or equal 1000.
     
     utils.cursor_print( cursor )
 
+
+    print( 
+'''
+An easier way to do this is with $in
+''' )
+    
+    cursor = collection.find( { "state" : { "$in" : [ "DC", "MA" ] },
+                                "pop" : { "$gte" : 1000 }})
+    
+    utils.cursor_print( cursor, 1 )
     print(
 '''
 Here is a boolean "$not" operator. Lets find all the zip codes in DC and MA that
@@ -43,9 +53,9 @@ have a population greater than or equal 1000.
 '''        
 )
     
-    cursor = collection.find( { "$not"  : { "state" : "CA" },
-                                "pop" : { "$gte" : 100000 }})
+    cursor = collection.find( { "state" : { "$not" : { "$in" : [ "DC", "MA" ] }},
+                                "pop" : { "$gte" : 1000 }})
     
-    utils.cursor_print( cursor )
+    utils.cursor_print( cursor, 1 )
     
     

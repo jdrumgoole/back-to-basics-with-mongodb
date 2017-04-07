@@ -38,10 +38,11 @@ def open_collection( collection, database="b2b", timeout=1000 ):
         sys.exit( 2 )
     
     
-def cursor_print( cursor ):
+def cursor_print( cursor, summary=False ):
     count = 0
     for i in cursor:
         count = count + 1
-        print( i )
+        if not summary:
+            print( i )
     print( "%i records" % count )
     return count
