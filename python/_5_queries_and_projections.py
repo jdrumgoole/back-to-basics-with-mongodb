@@ -1,6 +1,13 @@
 '''
 Created on 5 Apr 2017
 
+See 
+
+https://docs.mongodb.com/manual/reference/operator/query/
+
+https://docs.mongodb.com/manual/reference/operator/query-comparison/
+
+
 @author: jdrumgoole
 '''
 import pymongo

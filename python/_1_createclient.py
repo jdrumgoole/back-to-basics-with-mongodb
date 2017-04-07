@@ -1,16 +1,20 @@
 '''
 Created on 3 Jan 2017
 
+Before running this program download mongodb from
+
+https://www.mongodb.com/download-center#community
+
+run the mongod deemon to start a database server.
+This will start a server on port 27017.
+This client connects to that port by default.
+
+See also
+
+http://api.mongodb.com/python/current/api/pymongo/mongo_client.html
+
 @author: jdrumgoole
 '''
-
-#
-# Before running this program download mongodb from
-# https://www.mongodb.com/download-center#community
-# run the mongod deemon to start a database server.
-# This will start a server on port 27017.
-# This client connects to that port by default.
-#
 
 import pprint
 import pymongo

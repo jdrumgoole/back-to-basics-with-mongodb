@@ -25,12 +25,11 @@ https://github.com/jdrumgoole/back-to-basics-with-mongodb/tree/master/data
             fd.write(chunk)
     print( "Created zips.json")
     
-    print( "Importing zips.json in mongodb")
+    print( "Importing zips.json into mongodb")
     client = pymongo.MongoClient()
     b2b_database = client[ "b2b" ]
-    zips_collection = b2b_database[ "zips"]
-    
     b2b_database.drop_collection( "zips" )
+    zips_collection = b2b_database[ "zips"]
     
     count = 0
     with open( "zips.json", "r") as fd:
